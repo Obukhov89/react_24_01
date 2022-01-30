@@ -1,10 +1,10 @@
 import './App.css';
-import Message from './Components/Messages/Message';
+import IndexForm from './Components/Messages/IndexForm';
 
 function App() {
   return (
     <div className="App">
-      <Message text={ 'дорогой друг' }/>
+      <IndexForm/>
     </div>
   );
 }

@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 const StyledP = styled.p
 `
+
 text-align: center;
-margin: 0 auto;
+margin: 10px  auto;
 width: 200px;
 height: 70px;
 background-color:#00BFFF;
@@ -12,10 +13,12 @@ border: 2px solid #696969;
 border-radius: 10px;
 `
 
-const Message = ( {text} ) => {
+const Message = ( {messageList} ) => {
 
     return(
-        <StyledP>Привет, {text}!</StyledP>
+        <>
+            { messageList.map( (msg, idx) => { return  <div  key={idx}> <StyledP> {msg.author}: {msg.message} </StyledP> </div> } ) }
+        </>
     )
 }
 
