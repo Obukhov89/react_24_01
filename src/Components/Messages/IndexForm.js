@@ -2,6 +2,7 @@ import { useState , useEffect} from "react";
 import Form from "./Form";
 import Message from "./Message";
 
+
 const FormIndex = () => {
   const [messageList, setMessageList] = useState([
     { author: "Robot", message: "Привет! Это робот" },
@@ -28,6 +29,7 @@ const FormIndex = () => {
 
   return (
     <>
+      
       <Message messageList={messageList} />
       <Form messageChange={handleMessage} />
     </>
