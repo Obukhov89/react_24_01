@@ -1,5 +1,6 @@
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
+import { Link } from 'react-router-dom';
 
 const ChatList = () =>{
 
@@ -13,7 +14,7 @@ const ChatList = () =>{
     return(
         
             <List sx={{width:'50%'}}>
-               {ChatList.map((chat, idx)=>(<ListItem sx={{width:'50%'}} key={chat.id}>{chat.name}</ListItem>))}
+               {ChatList.map((chat, idx)=>(<ListItem sx={{width:'50%'}}key={chat.id}><Link to={`/chats/${chat.id}`}>{chat.name}</Link></ListItem>))}
             </List>
         
     )

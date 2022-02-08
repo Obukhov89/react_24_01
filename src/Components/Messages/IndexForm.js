@@ -1,9 +1,16 @@
 import { useState , useEffect} from "react";
 import Form from "./Form";
 import Message from "./Message";
+import styled from 'styled-components';
 
 
-const FormIndex = () => {
+const Div = styled.div
+`
+text-align: center;
+`
+
+
+const IndexForm = () => {
   const [messageList, setMessageList] = useState([
     { author: "Robot", message: "Привет! Это робот" },
   ]);
@@ -28,12 +35,12 @@ const FormIndex = () => {
 },[messageList]);
 
   return (
-    <>
+    <Div>
       
       <Message messageList={messageList} />
       <Form messageChange={handleMessage} />
-    </>
+    </Div>
   );
 };
 
-export default FormIndex;
+export default IndexForm;
